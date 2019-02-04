@@ -19,14 +19,26 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
-    rules: [{
-      test: /\.scss$/,
-      use: [
-        { loader: MiniCssExtractPlugin.loader, },
-        { loader: 'css-loader', options: { sourceMap: true } },
-        { loader: 'sass-loader', options: { sourceMap: true } },
-      ],
-    }],
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader, },
+          { loader: 'css-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } },
+        ],
+      }
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(pathToClean, cleanOptions),
