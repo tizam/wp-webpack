@@ -5,9 +5,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-
-
-
 let pathToClean = ['dist'];
 let cleanOptions = {
   root: __dirname,
@@ -15,13 +12,13 @@ let cleanOptions = {
   dry: false,
 };
 
-
 module.exports = {
   entry: ['./src/js/main.js', './src/scss/main.scss'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  devtool: 'source-map',
   optimization: {
     minimizer: [
       new UglifyJsPlugin(),
