@@ -1,6 +1,15 @@
 const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
+
+let pathToClean = ['dist'];
+let cleanOptions = {
+  root: __dirname,
+  verbose: true,
+  dry: false,
+};
 
 
 module.exports = {
@@ -20,6 +29,7 @@ module.exports = {
     }],
   },
   plugins: [
+    new CleanWebpackPlugin(pathToClean, cleanOptions),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
