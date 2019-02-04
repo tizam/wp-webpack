@@ -1,0 +1,26 @@
+{
+  "name": "wp-webpack",
+  "version": "1.0.0",
+  "description": "Wordpress with Webpack starter theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "watch": "webpack --watch --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "wordpress",
+    "webpack"
+  ],
+  "author": "ladoui abdellah",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  }
+}
