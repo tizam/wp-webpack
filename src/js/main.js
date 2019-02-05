@@ -1,2 +1,6 @@
-console.log('this is a file');
-console.log('aaa')
+import $ from 'jquery';
+import 'bootstrap';
+
+$(document).ready(() => {
+  console.log('Jquery Loaded');
+});
