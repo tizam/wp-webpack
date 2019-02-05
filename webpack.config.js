@@ -20,6 +20,9 @@ module.exports = {
   },
   devtool: 'source-map',
   optimization: {
+    splitChunks: {
+      chunks: 'all'
+    },
     minimizer: [
       new UglifyJsPlugin(),
       new OptimizeCssAssetsPlugin({})
