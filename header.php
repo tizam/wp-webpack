@@ -11,7 +11,30 @@
 <body <?php body_class(); ?>>
 
   <header>
-    <nav role="navigation">
-      <?php wp_nav_menu(['theme_location' => 'primary menu']); ?>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="<?php echo site_url() ?>"><?php echo bloginfo('name') ?></a>
+        <?php
+        wp_nav_menu(array(
+          'theme_location'    => 'navigation',
+          'depth'             => 2,
+          'container'         => 'div',
+          'container_class'   => 'collapse navbar-collapse',
+          'container_id'      => 'bs-example-navbar-collapse-1',
+          'menu_class'        => 'nav navbar-nav',
+          'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+          'walker'            => new WP_Bootstrap_Navwalker(),
+        ));
+        ?>
+        <form class="form-inline my-2 my-lg-0" action="/" method="get">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="s" id="search" value="<?php the_search_query() ?>">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cherchez</button>
+        </form>
+      </div>
     </nav>
   </header>

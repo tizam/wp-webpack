@@ -1,5 +1,8 @@
 <?php
 
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
 add_action('after_setup_theme', function () {
   // Add post thumbnails support.
   add_theme_support('post-thumbnails');
