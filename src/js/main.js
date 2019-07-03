@@ -1,6 +1,6 @@
-import $ from 'jquery';
-import 'bootstrap';
+import $ from "jquery";
+import "bootstrap";
 
 $(document).ready(() => {
-  console.log('Jquery Loaded');
+  console.log("Jquery Loaded");
 });
