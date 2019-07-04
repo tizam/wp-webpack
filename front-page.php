@@ -10,13 +10,13 @@ $buildings = new WP_Query($args);
             <h1 class="display-4"><?php bloginfo('title') ?></h1>
             <p class="lead">Un simple site web ou vous pouvez ajouter les photos des chantiers, afin de pouvoir suivre la progression.</p>
         </div>
-        <div class="card-deck">
+        <div class="card-deck mb-5">
             <?php if ($buildings->have_posts()) : while ($buildings->have_posts()) : $buildings->the_post(); ?>
                     <div class="card text-center" style="width: 18rem;">
                         <img src="<?php echo get_the_post_thumbnail_url() ?>" class="card-img-top" alt="<?php echo get_the_post_thumbnail_caption() ?>">
                         <div class="card-body">
                             <h5 class="card-title"><?php the_title(); ?></h5>
-                            <p class="card-text"><?php echo get_the_excerpt() ?></p>
+                            <p class="card-text"><?php the_field('date') ?></p>
                             <a href="<?php echo get_the_permalink() ?>" class="btn btn-primary">Voir les détails</a>
                         </div>
                     </div>
