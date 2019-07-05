@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 <?php
-$args = ['post_type' => 'batiment', 'posts_per_page' => 12];
+$args = [
+    'post_type' => 'batiment',
+    'posts_per_page' => 12,
+];
+
 $buildings = new WP_Query($args);
 ?>
 
@@ -21,14 +25,19 @@ $buildings = new WP_Query($args);
                     <a href="<?php echo get_the_permalink() ?>" class="btn btn-primary">Voir les détails</a>
                 </div>
             </div>
-        <?php endwhile;
-    else : ?>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+    <?php else : ?>
         <article>
             <p>Nothing to see.</p>
         </article>
     <?php endif; ?>
-    <?php wp_reset_query(); ?>
 </div>
+<a type="button" class="btn btn-primary btn-lg btn-block mb-3" href="/batiments">Voir tout les batiments</a>
+
+
+
+
 
 
 

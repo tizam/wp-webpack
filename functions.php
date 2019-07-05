@@ -49,3 +49,12 @@ function header_widgets_init() {
  }
  
  add_action( 'widgets_init', 'header_widgets_init' );
+
+ // wp pagination fix
+ add_action('parse_query', 'changept');
+function changept()
+{
+  if (is_category() && !is_admin())
+    set_query_var('post_type', array('post', 'batiment'));
+  return;
+}

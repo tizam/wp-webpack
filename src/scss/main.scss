@@ -25,7 +25,19 @@ header {
 
 }
 
+.search-form {
+    margin-bottom: 30px;
+    justify-content: center;
 
+    .form-control {
+        width: 74%;
+        margin: 0 1%;
+    }
+
+    .btn {
+        width: 24%;
+    }
+}
 
 main {
     min-height: 70vh;
@@ -37,7 +49,14 @@ main {
     align-items: center;
     justify-content: center;
     background-color: $box-color;
-    color: $text-light-color;
+    
+    a {
+        color: $text-light-color;
+    }
+}
+
+.card-img-top {
+    height: 200px;
 }
 
 footer {

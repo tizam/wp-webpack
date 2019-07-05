@@ -1,9 +1,8 @@
 <?php get_header(); ?>
 <?php
 
-$categories = get_categories();
+$categories = get_categories(['orderby' => 'name', 'order' => 'ASC', 'parent' => 0]);
 
-var_dump($categories);
 
 ?>
 
@@ -12,8 +11,7 @@ var_dump($categories);
     <?php $category_link = get_category_link($category->term_id); ?>
         <div class="col">
             <div class="box text-center border rounded">
-                <h2><?php echo $category->name ?></h2>
-                <a href="<?php echo esc_url($category_link); ?>">cat</a>
+            <a href="<?php echo esc_url($category_link); ?>"><h2><?php echo $category->name ?></h2></a>
             </div>
         </div>
     <?php endforeach; ?>
