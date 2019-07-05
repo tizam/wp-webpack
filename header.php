@@ -12,7 +12,7 @@
 
   <header>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
+    <nav class="navbar navbar-expand-md mb-4" role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,3 +38,7 @@
       </div>
     </nav>
   </header>
+
+  <main role="main">
+    <div class="container">
+    

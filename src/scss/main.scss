@@ -1,5 +1,45 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+/* vars */
+$bg-color: #464EFF;
+$box-color: #B892FF;
+
+$text-light-color: #fff;
+$text-hover-color: #FFC2E2;
+
 .um {
-    opacity: 1 !important;
+  opacity: 1 !important;
+}
+
+header {
+    background-color: $bg-color;
+    
+
+    .navbar-brand, .nav-link {
+        color: $text-light-color;
     }
+
+    .navbar-brand:hover, .nav-link:hover {
+        color: $text-hover-color;
+    }
+
+}
+
+
+
+main {
+    min-height: 70vh;
+}
+
+.box {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $box-color;
+    color: $text-light-color;
+}
+
+footer {
+    background-color: $bg-color;
+}
