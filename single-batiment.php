@@ -1,13 +1,16 @@
 <?php get_header(); ?>
 
 
-
-<main role="main">
-	<div class="container">
+	<div class="single-building">
 		<div class="row">
 			<div class="col-sm-12 col-md-8">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						<h2><?php the_title() ?> | <span><?php the_field('date') ?></span></h2>
+						<h2 class="text-center"><?php the_title() ?></h2>
+						<h3 class="photo-date text-center"><?php the_field('date') ?></h3>
+						<div class="img-wrapper text-center">
+							<?php the_post_thumbnail('medium') ?>
+						</div>
+						<hr />
 						<?php the_content() ?>
 					<?php endwhile;
 				else : ?>
@@ -16,12 +19,10 @@
 					</article>
 				<?php endif; ?>
 			</div>
-			<div class="col-sm-12 col-md-4">
+			<div class="col-sm-12 col-md-4 sidebar">
 				<?php dynamic_sidebar('new-widget-area') ?>
 			</div>
 		</div>
 	</div>
-</main>
-
 
 <?php get_footer(); ?>

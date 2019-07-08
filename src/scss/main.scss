@@ -11,22 +11,30 @@ $text-hover-color: #FFC2E2;
   opacity: 1 !important;
 }
 
+.arabe-text {
+    text-align: right;
+}
+
 header {
     background-color: $bg-color;
     
-
-    .navbar-brand, .nav-link {
+    .navbar-dark .navbar-nav .nav-link {
         color: $text-light-color;
     }
 
-    .navbar-brand:hover, .nav-link:hover {
-        color: $text-hover-color;
+    .navbar-brand {
+        color: $text-light-color !important;
+    }
+
+    .navbar-brand:hover {
+        color: $text-hover-color !important;
     }
 
 }
 
 .search-form {
-    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
     justify-content: center;
 
     .form-control {
@@ -41,6 +49,8 @@ header {
 
 main {
     min-height: 70vh;
+    background-color: RGBA(238,238,238,0.59);
+    padding-top: 20px;
 }
 
 .box {
@@ -57,6 +67,26 @@ main {
 
 .card-img-top {
     height: 200px;
+}
+
+.single-building {
+    h2 {
+        text-transform: capitalize;
+    }
+
+    .photo-date {
+        font-size: 3rem;
+    }
+
+    .sidebar {
+        border-left: 1px solid #eee;
+    }
+}
+
+.search-result {
+    img {
+        max-height: 200px;
+    }
 }
 
 footer {

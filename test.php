@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php  
+
+$cat = get_query_var('cat');
+$entries = new WP_Query(['cat' => $cat]);
+
+// var_dump($entries);
+
+?>
 
 <div class="row">
     <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
@@ -8,6 +15,6 @@
             </div>
         </div>
     <?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>
 <?php endif; ?>
-
-<?php get_footer(); ?>
+</div>
