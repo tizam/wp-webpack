@@ -19,7 +19,7 @@
     <?php endwhile;
 else : ?>
     <article>
-        <p>Nothing to see.</p>
+        <p>La recherche n'a rien trouver</p>
     </article>
 <?php endif; ?>
 <?php wp_pagenavi(); ?>
