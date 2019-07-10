@@ -5,10 +5,25 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="contact-info">
+        <a href="mailto:contact@ladouiabdellah.com">contact@ladouiabdellah.com</a>
+      </div>
+      <div class="social-icons">
+        <a href="#" target="_blank"
+          <i class="fa fa-facebook-square"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
 
   <header>
 

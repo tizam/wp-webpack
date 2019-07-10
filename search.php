@@ -12,6 +12,7 @@
                     <h5 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
                     <?php the_excerpt(); ?>
                     <p class="card-text"><?php echo get_the_date() ?></p>
+                    <a href="<?php the_permalink() ?>" class="btn btn-primary">Voir les details</a>
                 </div>
             </div>
         </div>

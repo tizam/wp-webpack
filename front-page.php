@@ -37,7 +37,7 @@ $buildings = new WP_Query($args);
 ?>
 
 <div class="row">
-    <h2 class="mb-3">Derniére photos ajoutée</h2>
+    <h2 class="mb-3">Derniéres photos ajoutée</h2>
     <div class="card-deck mb-5">
         <?php if ($buildings->have_posts()) : while ($buildings->have_posts()) : $buildings->the_post(); ?>
                 <div class="col-sm-12 col-md-3">
@@ -46,6 +46,7 @@ $buildings = new WP_Query($args);
                         <div class="card-body">
                             <h5 class="card-title"><?php the_title(); ?></h5>
                             <p class="card-text"><?php the_field('date') ?></p>
+                            <p>Photos de: <?php the_author() ?></p>
                             <a href="<?php echo get_the_permalink() ?>" class="btn btn-primary">Voir les détails</a>
                         </div>
                     </div>

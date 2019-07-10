@@ -15,6 +15,19 @@ $text-hover-color: #FFC2E2;
     text-align: right;
 }
 
+.topbar {
+    background-color: #000;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        color: #fff;
+    }
+}
+
 header {
     background-color: $bg-color;
     

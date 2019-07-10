@@ -30,6 +30,7 @@ add_action('wp_enqueue_scripts', function () {
   wp_deregister_script('jquery');
 
   wp_enqueue_style("$theme-style", get_template_directory_uri() . '/dist/main.css', [], time(), 'all');
+  wp_enqueue_style("fontawesome", 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', [], false, 'all');
 
   wp_enqueue_script("$theme-script", get_template_directory_uri() . '/dist/bundle.js', [], time(), true);
 });
